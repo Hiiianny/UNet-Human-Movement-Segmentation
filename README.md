@@ -13,7 +13,6 @@ The primary goal of this project is to accurately segment human figures from com
 - **Dataset:** TikTok Dances Segmentation (2,615 images)
 - **Loss Function:** Hybrid BCE + Dice Loss (for sharp boundary delineation)
 - **Optimization:** Adam Optimizer with `ReduceLROnPlateau` scheduler
-- **Training Strategy:** Early Stopping implemented (converged at 30 epochs)
 - **Input Resolution:** 128x128 pixels
 
 ## Performance Metrics
