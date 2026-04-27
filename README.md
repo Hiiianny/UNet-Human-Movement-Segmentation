@@ -27,3 +27,19 @@ The model achieved high-precision segmentation results on the unseen validation 
 ```bash
 git clone [https://github.com/Hiiianny/UNet-Human-Movement-Segmentation.git](https://github.com/Hiiianny/UNet-Human-Movement-Segmentation.git)
 cd UNet-Human-Movement-Segmentation
+
+**2. Create a virtual environment:**
+```bash
+python -m venv venv
+source venv/bin/activate  # On Windows use: venv\Scripts\activate
+
+**3. Install dependencies:**
+```bash
+pip install -r requirements.txt
+
+**4. Run the Streamlit Application:**
+```bash
+streamlit run app.py
+
+## 🧠 Challenges & Learnings
+During the development of this baseline, standard BCE loss resulted in blurry edges. Implementing a Hybrid Loss (BCE + Dice) significantly improved boundary sharpness. Furthermore, testing with out-of-distribution images (e.g., half-body shots or complex clothing) revealed a scale bias, emphasizing the necessity of diverse datasets and data augmentation for real-world robustness.
